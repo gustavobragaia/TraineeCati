@@ -1,0 +1,9 @@
+.wrapper{
+    background-color: var(--background);
+    
+    display: flex;
+    gap: 24px;
+
+    overflow-x: scroll;
+    padding: 2rem 3rem;
+}

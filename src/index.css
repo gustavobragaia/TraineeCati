@@ -1,0 +1,17 @@
+:root {
+  font-family: 'Poppins', sans-serif !important;
+  
+  --white: #fff;
+
+  --gray-bg-1: #5B5B5B;
+  --gray-bg-2: #4C4444;
+
+  --gray-border: #4E4E4E; 
+}
+p, a, button{
+  font-size: 1rem
+}
+*{
+  padding: 0;
+  margin: 0;
+}

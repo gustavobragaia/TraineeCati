@@ -1,0 +1,27 @@
+.navbar{
+    background: linear-gradient(to right, var(--gray-bg-1), var(--gray-bg-2));
+    height: 84px;
+    border-bottom: solid 1px var(--gray-border);
+
+    padding: 0rem 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+.button{
+    border: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.button span{
+    color: var(--white);
+}
+
+.columnright{
+    display: flex   ;
+    gap: 2rem;
+}

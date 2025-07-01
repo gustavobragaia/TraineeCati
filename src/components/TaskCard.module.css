@@ -1,0 +1,62 @@
+.wrapper{
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid var(--gray-border);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: .8rem;
+}
+.headerCardTask{
+    display: flex;
+    justify-content: space-between;
+}
+.finishedTask{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.finishedTask span{
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 400;
+}
+.contentCardTask{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.contentCardTask h6{
+    font-size: 1.2rem;
+    color: var(--white);
+    font-weight: 600;
+}
+.contentCardTask p{
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 400;
+}
+.priority{
+    padding: .3rem 1rem;
+    border-radius: 4px;
+    background-color: #46F7B7;
+}
+.priority span{
+    font-size: .8rem;
+    font-weight: 600;
+}
+.footerCardTask{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width:  fit-content;
+    border-radius: 4px;
+    padding: .2rem .4rem;
+    background-color: var(--grayCalendarFooter);
+}
+.footerCardTask p{
+    font-weight: 600;
+    font-size: .8rem;
+    color: var(--date-text);
+}

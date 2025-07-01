@@ -1,8 +1,11 @@
 import { CalendarWeekFill, Check2 } from 'react-bootstrap-icons'
+
 import {format} from 'date-fns'
+import { ptBR } from 'date-fns/locale'
+
 import styles from './TaskCard.module.css'
 
- type TaskCardProps = {
+type TaskCardProps = {
     id: number;
     priorityStatus: string;
     taskTitle: string,
@@ -12,7 +15,9 @@ import styles from './TaskCard.module.css'
 
 export function TaskCard(props: TaskCardProps){
 
-    const formatedDate = format(props.taskDate,  "d 'de' LLLL 'ás' HH:mm'h'")
+    const formatedDate = format(props.taskDate,  "dd MMMM',' u",{
+        locale: ptBR
+    })
 
     return(
         <div className={styles.wrapper}>

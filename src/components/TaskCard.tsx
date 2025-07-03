@@ -4,20 +4,27 @@ import {format} from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 
 import styles from './TaskCard.module.css'
+import { FinishTaskButton } from './FinishTaskButton'
 
 type TaskCardProps = {
-    id: number;
+    key: number;
     priorityStatus: string;
     taskTitle: string,
     taskDescription: string,
     taskDate: Date,
 }
 
+
 export function TaskCard(props: TaskCardProps){
+    
 
     const formatedDate = format(props.taskDate,  "dd MMMM',' u",{
         locale: ptBR
     })
+
+    function finishTask(key){
+        console.log(`Setei como finalizado a task ${key}`)
+    }
 
     return(
         <div className={styles.wrapper}>
@@ -26,14 +33,11 @@ export function TaskCard(props: TaskCardProps){
                 <div className={styles.priority}>
                     <span className={styles.priorityText}>{props.priorityStatus}</span>
                 </div>
-                <div className={styles.finishedTask}>
-                    <Check2 
-                        color='white' 
-                        size={24} 
-                        style={{ border: '1px dashed #fff', borderRadius: '50%', padding: '3px' }}>
-                    </Check2>
-                    <span>Finalizar</span>
-                </div>
+
+            <FinishTaskButton
+                finishTask={finishTask}
+            ></FinishTaskButton>
+
             </div>
 
             <div className={styles.contentCardTask}>
@@ -44,7 +48,7 @@ export function TaskCard(props: TaskCardProps){
             <div className={styles.footerCardTask}>
                 <CalendarWeekFill color='var(--date-text)'></CalendarWeekFill>
                 <time>{formatedDate}</time>
-            </div>
+            </div>  
         </div>  
     )
 

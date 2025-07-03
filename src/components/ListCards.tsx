@@ -6,22 +6,22 @@ const tasks: {id: number; taskTitle: string; taskDescription: string; taskDate: 
     {
         id: 1,
         priorityStatus: "Baixa prioridade",
-        taskTitle: "Como jogar no Japão",
-        taskDescription: "Migos the classic of the music lil Bro",
+        taskTitle: "Como morar no Japão",
+        taskDescription: "Migos the classic",
         taskDate: new Date('2025-05-03 20:00:00'),
     },
     {
         id: 2,
         priorityStatus: "Média prioridade",
-        taskTitle: "Como jogar no Afeganistão",
-        taskDescription: "Migos the classic of the music lil Bro",
+        taskTitle: "Como morar no Afeganistão",
+        taskDescription: "Migos the classic",
         taskDate: new Date('2025-05-03 20:00:00'),
     },
     {
         id: 3,
         priorityStatus: "Baixa prioridade",
-        taskTitle: "Como jogar no Jalapão",
-        taskDescription: "Migos the classic of the music lil Bro",
+        taskTitle: "Como morar no Jalapão",
+        taskDescription: "Migos the classic",
         taskDate: new Date('2025-05-03 20:00:00'),
     }
 ]

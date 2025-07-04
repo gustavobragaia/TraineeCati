@@ -1,10 +1,12 @@
-import { CalendarWeekFill, Check2 } from 'react-bootstrap-icons'
+import { CalendarWeekFill } from 'react-bootstrap-icons'
 
 import {format} from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 
 import styles from './TaskCard.module.css'
 import { FinishTaskButton } from './FinishTaskButton'
+
+import { useState } from 'react'
 
 type TaskCardProps = {
     key: number;
@@ -16,15 +18,18 @@ type TaskCardProps = {
 
 
 export function TaskCard(props: TaskCardProps){
-    
+
+    const [isFinished, setIsFinished] = useState(false)
+
+    function handleFinishedTask(){
+        setIsFinished(prev => !prev)
+        console.log(props)
+    }
 
     const formatedDate = format(props.taskDate,  "dd MMMM',' u",{
         locale: ptBR
     })
 
-    function finishTask(key){
-        console.log(`Setei como finalizado a task ${key}`)
-    }
 
     return(
         <div className={styles.wrapper}>
@@ -35,7 +40,8 @@ export function TaskCard(props: TaskCardProps){
                 </div>
 
             <FinishTaskButton
-                finishTask={finishTask}
+                onClick={handleFinishedTask}
+                isFinished={isFinished}
             ></FinishTaskButton>
 
             </div>

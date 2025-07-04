@@ -26,6 +26,14 @@ const tasks: {id: number; taskTitle: string; taskDescription: string; taskDate: 
     }
 ]
 
+type TaskCard = {
+    key: number;
+    priorityStatus: string;
+    taskTitle: string,
+    taskDescription: string,
+    taskDate: Date,
+}
+
 export function ListCards(){
     return(
         <div className={styles.listCard}>  
